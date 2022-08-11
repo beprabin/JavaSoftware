@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.*;
 /**
  *
- * @author USER
+ * @author PRABIN
  */
 public class CalculatorDemo {
     CalculatorDemo(){
@@ -46,6 +46,11 @@ public class CalculatorDemo {
     f.add(p2);
     f.setSize(300,400);
     f.setVisible(true);
+    f.addWindowListener(new WindowAdapter(){
+        public void windowClosing(WindowEvent we){
+            System.exit(0);
+        }
+    });
     }
     public static void main(String[] args) {
         new CalculatorDemo();
