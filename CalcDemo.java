@@ -37,7 +37,42 @@ public class CalcDemo {
     p1.add(l3);
     p1.add(t3);
    
+    b1.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent ae){
+            int n1=Integer.parseInt(t1.getText());
+            int n2=Integer.parseInt(t2.getText());
+            int sum=n1+n2;
+            t3.setText(""+sum);
+        }      
+    });
     
+    b2.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent ae){
+            int n1=Integer.parseInt(t1.getText());
+            int n2=Integer.parseInt(t2.getText());
+            int diff=n1-n2;
+            t3.setText(""+diff);
+        }      
+    });
+     
+    b3.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent ae){
+            int n1=Integer.parseInt(t1.getText());
+            int n2=Integer.parseInt(t2.getText());
+            int prod=n1*n2;
+            t3.setText(""+prod);
+        }      
+    });
+    
+    b4.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent ae){
+            int n1=Integer.parseInt(t1.getText());
+            int n2=Integer.parseInt(t2.getText());
+            int div=n1/n2;
+            t3.setText(""+div);
+        }      
+    });
+    t3.setEditable(false);
     
     Panel p2=new Panel();
     Button b1=new Button("+");
