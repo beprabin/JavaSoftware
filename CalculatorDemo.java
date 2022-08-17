@@ -42,6 +42,42 @@ public class CalculatorDemo {
     p2.add(b3);
     p2.add(b4);
     
+    b1.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent ae){
+            int n1=Integer.parseInt(t1.getText());
+            int n2=Integer.parseInt(t2.getText());
+            int sum=n1+n2;
+            t3.setText(""+sum);
+        }      
+    });
+    
+    b2.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent ae){
+            int n1=Integer.parseInt(t1.getText());
+            int n2=Integer.parseInt(t2.getText());
+            int diff=n1-n2;
+            t3.setText(""+diff);
+        }      
+    });
+     
+    b3.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent ae){
+            int n1=Integer.parseInt(t1.getText());
+            int n2=Integer.parseInt(t2.getText());
+            int prod=n1*n2;
+            t3.setText(""+prod);
+        }      
+    });
+    
+    b4.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent ae){
+            int n1=Integer.parseInt(t1.getText());
+            int n2=Integer.parseInt(t2.getText());
+            int div=n1/n2;
+            t3.setText(""+div);
+        }      
+    });
+    
     f.add(p1);
     f.add(p2);
     f.setSize(300,400);
